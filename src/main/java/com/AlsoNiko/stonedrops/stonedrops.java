@@ -1,0 +1,59 @@
+package com.AlsoNiko.stonedrops;
+
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.minecraft.loot.ConstantLootTableRange;
+import net.minecraft.loot.entry.LootTableEntry;
+import net.minecraft.util.Identifier;
+import net.minecraft.block.OreBlock;
+
+public class stonedrops implements ModInitializer {
+    public static final String MOD_ID = "stn";
+
+    private static final Identifier Stone_Loot_Table_ID = new Identifier("minecraft", "blocks/stone");
+    private static final Identifier Die_Loot_Table_ID = new Identifier("minecraft", "blocks/diorite");
+    private static final Identifier And_Loot_Table_ID = new Identifier("minecraft", "blocks/andesite");
+    private static final Identifier Gran_Loot_Table_ID = new Identifier("minecraft", "blocks/granite");
+    private static final Identifier rum_loot_table_ID = new Identifier(MOD_ID, "blocks/rum");
+
+    @Override
+
+    public void onInitialize() {
+        modifyLootTables();
+    }
+
+    private void modifyLootTables() {
+        LootTableLoadingCallback.EVENT.register(((resourceManager, lootmanager, id, supplier, setter) -> {
+
+            if (Gran_Loot_Table_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder4 = FabricLootPoolBuilder.builder()
+                        .rolls(ConstantLootTableRange.create(1))
+                        .with(LootTableEntry.builder(rum_loot_table_ID));
+                supplier.withPool(poolBuilder4.build());
+            }
+
+            if (And_Loot_Table_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder3 = FabricLootPoolBuilder.builder()
+                        .rolls(ConstantLootTableRange.create(1))
+                        .with(LootTableEntry.builder(rum_loot_table_ID));
+                supplier.withPool(poolBuilder3.build());
+            }
+
+            if (Die_Loot_Table_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder2 = FabricLootPoolBuilder.builder()
+                        .rolls(ConstantLootTableRange.create(1))
+                        .with(LootTableEntry.builder(rum_loot_table_ID));
+                supplier.withPool(poolBuilder2.build());
+            }
+
+            if (Stone_Loot_Table_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                        .rolls(ConstantLootTableRange.create(1))
+                        .with(LootTableEntry.builder(rum_loot_table_ID));
+                supplier.withPool(poolBuilder.build());
+
+            }
+        }));
+    }
+}
