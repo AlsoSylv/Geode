@@ -1,8 +1,9 @@
-# Geode
-Lets stone drop items like iron gold and diamonds!
+# Fabric Example Mod
 
+## Setup
 
-More features planned: 
-EXP from stone
-Golden nuggets from netherrack 
-Treasure chests
+For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+
+## License
+
+This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.

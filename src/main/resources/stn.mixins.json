@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.AlsoNiko.stonedrops.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "StoneDropMixin"
+  ],
+  "client": [
+    "StoneDropMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

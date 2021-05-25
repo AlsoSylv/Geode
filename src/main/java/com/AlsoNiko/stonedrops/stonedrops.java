@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.ConstantLootTableRange;
 import net.minecraft.loot.entry.LootTableEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.block.OreBlock;
 
 public class stonedrops implements ModInitializer {
     public static final String MOD_ID = "stn";
@@ -16,6 +15,8 @@ public class stonedrops implements ModInitializer {
     private static final Identifier And_Loot_Table_ID = new Identifier("minecraft", "blocks/andesite");
     private static final Identifier Gran_Loot_Table_ID = new Identifier("minecraft", "blocks/granite");
     private static final Identifier rum_loot_table_ID = new Identifier(MOD_ID, "blocks/rum");
+    private static final Identifier Rack_Loot_Table_ID = new Identifier("minecraft", "blocks/netherrack");
+    private static final Identifier Gin_Loot_Table_ID = new Identifier(MOD_ID, "blocks/gin");
 
     @Override
 
@@ -53,6 +54,13 @@ public class stonedrops implements ModInitializer {
                         .with(LootTableEntry.builder(rum_loot_table_ID));
                 supplier.withPool(poolBuilder.build());
 
+            }
+
+            if (Rack_Loot_Table_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder5 = FabricLootPoolBuilder.builder()
+                        .rolls(ConstantLootTableRange.create(1))
+                        .with(LootTableEntry.builder(Gin_Loot_Table_ID));
+                supplier.withPool((poolBuilder5.build()));
             }
         }));
     }
