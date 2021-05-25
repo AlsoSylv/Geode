@@ -1,11 +1,10 @@
-# Fabric Example Mod
+Geode
+Gedoe allows items to drop from stone when mined
 
-## Setup
+Future features planned are 
+Nuggests from netherrack
+EXP from stone
+Treasure chests from stone 
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
-
+Complining:
 Please use gradlew build when compiling
