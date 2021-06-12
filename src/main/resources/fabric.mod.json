@@ -23,7 +23,6 @@
     ]
   },
   "mixins": [
-    "stn.mixins.json"
   ],
 
   "depends": {
