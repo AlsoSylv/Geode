@@ -1,0 +1,123 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.01
+            }
+          ]
+        }
+      ],
+      "function": "minecraft:apply_bonus",
+      "enchantment": "minecraft:fortune",
+      "formula": "minecraft:ore_drops",
+      "conditions": [
+        {
+          "condition": "minecraft:alternative",
+          "terms": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "item": "minecraft:netherite_pickaxe",
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:fortune",
+                    "levels": {
+                      "min": 1,
+                      "max": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "item": "minecraft:diamond_pickaxe",
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:fortune",
+                    "levels": {
+                      "min": 1,
+                      "max": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "item": "minecraft:iron_pickaxe",
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:fortune",
+                    "levels": {
+                      "min": 1,
+                      "max": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "item": "minecraft:stone_pickaxe",
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:fortune",
+                    "levels": {
+                      "min": 1,
+                      "max": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "item": "minecraft:wooden_pickaxe",
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:fortune",
+                    "levels": {
+                      "min": 1,
+                      "max": 3
+                    }
+                  },
+                  {
+                    "enchantment": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 0,
+                      "max": 0
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
+

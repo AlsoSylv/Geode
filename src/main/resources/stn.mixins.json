@@ -1,7 +1,7 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "com.AlsoNiko.stonedrops.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
