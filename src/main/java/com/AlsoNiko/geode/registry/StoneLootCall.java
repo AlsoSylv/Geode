@@ -1,9 +1,7 @@
-package com.AlsoNiko.stonedrops.registry;
+package com.AlsoNiko.geode.registry;
 
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.ItemStack;
 import net.minecraft.loot.entry.LootTableEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
@@ -11,7 +9,7 @@ import net.minecraft.util.Identifier;
 public class StoneLootCall {
     public static final String MOD_ID = "stn";
 
-    public static final Identifier Stone_Loot_Table_ID = new Identifier("minecraft", "blocks/stone");
+    private static final Identifier Stone_Loot_Table_ID = new Identifier("minecraft", "blocks/stone");
     private static final Identifier Die_Loot_Table_ID = new Identifier("minecraft", "blocks/diorite");
     private static final Identifier And_Loot_Table_ID = new Identifier("minecraft", "blocks/andesite");
     private static final Identifier Gran_Loot_Table_ID = new Identifier("minecraft", "blocks/granite");

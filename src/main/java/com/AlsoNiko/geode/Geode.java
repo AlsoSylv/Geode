@@ -1,19 +1,15 @@
-package com.AlsoNiko.stonedrops;
+package com.AlsoNiko.geode;
 
-import com.AlsoNiko.stonedrops.registry.StoneLootCall;
-import com.AlsoNiko.stonedrops.registry.StoneXpCall;
+import com.AlsoNiko.geode.registry.StoneLootCall;
+import com.AlsoNiko.geode.registry.StoneXpCall;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.enchantment.Enchantments;
 
-public class stonedrops implements ModInitializer {
+public class Geode implements ModInitializer {
     private final StoneXpCall stoneXpCall = new StoneXpCall();
     private final StoneLootCall stoneLootCall = new StoneLootCall();
-    private final StoneConfig stoneConfig = new StoneConfig();
 
 
     @Override
@@ -22,9 +18,6 @@ public class stonedrops implements ModInitializer {
 //        setupEventListeners();
         stoneLootCall.modifyLootTables();
         stoneXpCall.XpLootCall();
-        AutoConfig.register(StoneConfig.ModConfig.class, GsonConfigSerializer::new);
-        StoneConfig.ModConfig config = AutoConfig.getConfigHolder(StoneConfig.ModConfig.class).getConfig();
-
 //        PlayerBlockBreakEvents.AFTER.register((world, player, pos, direction, entity) -> {
 //            if (FabricToolTags.PICKAXES.contains(player.getMainHandStack().getItem())) {
 //
@@ -35,6 +28,11 @@ public class stonedrops implements ModInitializer {
 //                return;
 //            }
 //        });
+    }
+    public static class ReadFile {
+        public static void main(String[] arges)throws Exception {
+
+        }
     }
 }
 

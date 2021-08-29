@@ -1,8 +1,10 @@
-package com.AlsoNiko.stonedrops.registry;
+package com.AlsoNiko.geode.registry;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.ExperienceOrbEntity;
+
+import static net.minecraft.block.Blocks.*;
 
 public class StoneXpCall {
     public void XpLootCall() {

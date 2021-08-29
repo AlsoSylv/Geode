@@ -1,7 +1,7 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "com.AlsoNiko.stonedrops.mixins",
+  "package": "com.AlsoNiko.geode.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

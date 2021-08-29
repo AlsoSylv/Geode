@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.AlsoNiko.stonedrops.stonedrops"
+      "com.AlsoNiko.geode.Geode"
     ]
   },
   "mixins": [
