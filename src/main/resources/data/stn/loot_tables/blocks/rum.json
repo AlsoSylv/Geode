@@ -21,7 +21,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.25
+                  "chance": 0.025
                 }
               ]
             },
@@ -72,7 +72,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.09
+                  "chance": 0.009
                 }
               ]
             },
@@ -131,7 +131,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.07
+                  "chance": 0.007
                 }
               ]
             },
@@ -184,7 +184,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.08
+                  "chance": 0.008
                 }
               ]
             },
@@ -243,7 +243,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.07
+                  "chance": 0.007
                 }
               ]
             },
@@ -296,7 +296,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.08
+                  "chance": 0.008
                 }
               ]
             },
@@ -335,7 +335,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.1
+                  "chance": 0.01
                 }
               ]
             },
@@ -380,7 +380,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.1
+                  "chance": 0.01
                 }
               ]
             },
@@ -417,7 +417,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.001
+                  "chance": 0.0001
                 }
               ]
             },
@@ -427,11 +427,8 @@
               "functions": [
                 {
                   "function": "minecraft:set_count",
-                  "count": {
-                    "min": 1,
-                    "max": 3
+                  "count": 1
                   }
-                }
               ],
               "conditions": [
                 {
@@ -459,7 +456,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.08675
+                  "chance": 0.008675
                 }
               ]
             }
