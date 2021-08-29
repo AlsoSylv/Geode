@@ -29,11 +29,6 @@ public class Geode implements ModInitializer {
 //            }
 //        });
     }
-    public static class ReadFile {
-        public static void main(String[] arges)throws Exception {
-
-        }
-    }
 }
 
 //    private void setupEventListeners() {
