@@ -19,12 +19,10 @@ public class StoneXpCall {
             if (FabricToolTags.PICKAXES.contains(player.getMainHandStack().getItem())) {
                     if (ArrayUtils.contains (StoneArray.STONES, state.getBlock ())) {
                         int rand_int1 = rand.nextInt (2);
-                        System.out.println (rand_int1 + "Rand1");
                         if (rand_int1 == 0)
                             return;
                         else {
                             int rand_int2 = (int)Math.floor(Math.random()*(max-min+1)+min);
-                            System.out.println (rand_int2 + "Rand2");
                             world.spawnEntity (new ExperienceOrbEntity (world, pos.getX () + 0.5, pos.getY () + 0.5, pos.getZ () + 0.5, rand_int2));
                         }
                     }
