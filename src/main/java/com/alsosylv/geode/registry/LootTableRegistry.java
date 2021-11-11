@@ -1,6 +1,6 @@
-package com.AlsoNiko.geode.registry;
+package com.alsosylv.geode.registry;
 
-import com.AlsoNiko.geode.Geode;
+import com.alsosylv.geode.Geode;
 import net.minecraft.util.Identifier;
 
 public class LootTableRegistry {

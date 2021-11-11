@@ -1,4 +1,4 @@
-package com.AlsoNiko.geode.registry;
+package com.alsosylv.geode.registry;
 
 import static net.minecraft.block.Blocks.*;
 

@@ -1,4 +1,4 @@
-package com.AlsoNiko.geode.registry;
+package com.alsosylv.geode.registry;
 
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.Arrays;
 
-import static com.AlsoNiko.geode.registry.LootTableRegistry.*;
+import static com.alsosylv.geode.registry.LootTableRegistry.*;
 
 public class StoneLootCall {
     public static void modifyLootTables() {

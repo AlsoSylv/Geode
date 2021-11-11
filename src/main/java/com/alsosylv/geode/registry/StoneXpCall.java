@@ -1,4 +1,4 @@
-package com.AlsoNiko.geode.registry;
+package com.alsosylv.geode.registry;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
