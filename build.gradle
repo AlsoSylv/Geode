@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.7-SNAPSHOT'
+	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -13,11 +13,17 @@ group = project.maven_group
 repositories {
 
 	maven { url "https://maven.shedaniel.me/" }
+	mavenCentral()
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+}
+
+configurations {
+	shadow
+	api.extendsFrom shadow
 }
 
 dependencies {
@@ -35,6 +41,8 @@ dependencies {
 		modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.34") {
 			exclude(group: "net.fabricmc.fabric-api")
 		}
+		shadow 'com.electronwill.night-config:core:3.6.3'
+		shadow 'com.electronwill.night-config:toml:3.6.3'
 	}
 
 	processResources {

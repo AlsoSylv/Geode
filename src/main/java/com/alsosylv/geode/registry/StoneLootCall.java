@@ -13,7 +13,7 @@ import static com.alsosylv.geode.registry.LootTableRegistry.*;
 public class StoneLootCall {
     public static void modifyLootTables() {
             LootTableLoadingCallback.EVENT.register((resourceManager, lootmanager, id, supplier, setter) -> {
-                for (Identifier identifier : Arrays.asList (
+                for (Identifier identifier : Arrays.asList(
                         Die_Loot_Table_ID,
                         And_Loot_Table_ID,
                         Gran_Loot_Table_ID,
@@ -22,19 +22,18 @@ public class StoneLootCall {
                         Tuff_Loot_Table_ID,
                         Drip_Loot_Table_ID))
                     if (identifier.equals (id)) {
-                        FabricLootPoolBuilder poolBuilder1 = FabricLootPoolBuilder.builder ()
-                                .rolls (ConstantLootNumberProvider.create (1))
+                        FabricLootPoolBuilder poolBuilder1 = FabricLootPoolBuilder.builder()
+                                .rolls (ConstantLootNumberProvider.create(1))
                                 .with (LootTableEntry.builder (Rum_loot_table_ID));
-                        supplier.withPool (poolBuilder1.build ());
+                        supplier.withPool(poolBuilder1.build ());
                     }
 
                 if (id.equals(Rack_Loot_Table_ID)) {
-                FabricLootPoolBuilder poolBuilder5 = FabricLootPoolBuilder.builder()
+                    FabricLootPoolBuilder poolBuilder2 = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(LootTableEntry.builder(Gin_Loot_Table_ID));
-                supplier.withPool((poolBuilder5.build()));
+                supplier.withPool(poolBuilder2.build());
             }
         });
-
     }
 }
