@@ -34,7 +34,6 @@ public class StoneXpCall {
                     if (EnchantmentHelper.getLevel (Enchantments.SILK_TOUCH, player.getMainHandStack ()) == 0) {
                         if (ArrayUtils.contains (StoneArray.STONES, state.getBlock ())) {
                             int rand_int = ThreadLocalRandom.current().nextInt(0, 101);
-                            System.out.println (rand_int);
                             if (rand_int > 100 - percent) {
                                 int rand_int2 = (int) Math.floor (Math.random () * (max - min + 1) + min);
                                 world.spawnEntity (new ExperienceOrbEntity (world, pos.getX () + 0.5, pos.getY () + 0.5, pos.getZ () + 0.5, rand_int2));
