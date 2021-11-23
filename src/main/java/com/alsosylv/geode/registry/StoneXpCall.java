@@ -29,7 +29,7 @@ public class StoneXpCall {
         config.close();
 
         if (dropXP) {
-        PlayerBlockBreakEvents.AFTER.register ((world, player, pos, state, blockEntity) -> {
+            PlayerBlockBreakEvents.AFTER.register ((world, player, pos, state, blockEntity) -> {
                 if (FabricToolTags.PICKAXES.contains (player.getMainHandStack ().getItem ())) {
                     if (EnchantmentHelper.getLevel (Enchantments.SILK_TOUCH, player.getMainHandStack ()) == 0) {
                         if (ArrayUtils.contains (StoneArray.STONES, state.getBlock ())) {
@@ -42,7 +42,7 @@ public class StoneXpCall {
                         }
                     }
                 }
-        });
+            });
         }
     }
 }
