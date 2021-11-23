@@ -9,7 +9,7 @@ import net.minecraft.entity.ExperienceOrbEntity;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.File;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class StoneXpCall {
 
@@ -21,29 +21,28 @@ public class StoneXpCall {
         config.load();
 
         boolean dropXP = config.get ("dropXP");
+        int min = config.get ("minXP");
+        int max = config.get ("maxXP");
+        int percent = config.get("percentXP");
 
         config.save();
         config.close();
 
-        Random rand = new Random ();
-        int min = 1;
-        int max = 3;
-
-
+        if (dropXP) {
         PlayerBlockBreakEvents.AFTER.register ((world, player, pos, state, blockEntity) -> {
-            if (dropXP) {
                 if (FabricToolTags.PICKAXES.contains (player.getMainHandStack ().getItem ())) {
                     if (EnchantmentHelper.getLevel (Enchantments.SILK_TOUCH, player.getMainHandStack ()) == 0) {
                         if (ArrayUtils.contains (StoneArray.STONES, state.getBlock ())) {
-                            int rand_int1 = rand.nextInt (2);
-                            if (rand_int1 == 0) {
+                            int rand_int = ThreadLocalRandom.current().nextInt(0, 101);
+                            System.out.println (rand_int);
+                            if (rand_int > 100 - percent) {
                                 int rand_int2 = (int) Math.floor (Math.random () * (max - min + 1) + min);
                                 world.spawnEntity (new ExperienceOrbEntity (world, pos.getX () + 0.5, pos.getY () + 0.5, pos.getZ () + 0.5, rand_int2));
                             }
                         }
                     }
                 }
-            }
         });
+        }
     }
 }
